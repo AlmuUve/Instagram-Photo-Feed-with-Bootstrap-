@@ -7,33 +7,16 @@
         <title>Instagram</title>
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid px-0">
             <div class="row py-1 bg-light sticky-top">
                 <div class="offset-1 col-2 d-flex align-items-center">
                     <i class="fab fa-instagram fa-2x"></i>
                     <span class="fs-5 p-2">Instagram</span>
                 </div>
                 <div class="offset-6 col-2 p-2 d-flex justify-content-end">
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"> <!--revisar no funciona bien -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"> 
                         Create a new post
                     </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <form>
-                                        <textarea class="form-control" name="msg" rows="3"></textarea>
-                                        <button type="submit" class="btn mt-2 border-round border-1 border-secondary"><i class="fas fa-camera "></i></button>
-                                        <button type="submit" class="btn mt-2 border-round border-1 border-secondary"><i class="fas fa-search-location"></i></i></button>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn btn-success">Publish</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-1 p-2">
                     <div class="btn-group">
@@ -50,14 +33,31 @@
                     </div>
                 </div>
             </div>  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form>
+                                <textarea class="form-control" name="msg" rows="3"></textarea>
+                                <button type="submit" class="btn mt-2 border-round border-1 border-secondary"><i class="fas fa-camera "></i></button>
+                                <button type="submit" class="btn mt-2 border-round border-1 border-secondary"><i class="fas fa-search-location"></i></i></button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--Comienzan Nav Pills-->
             <div class="container-fluid bg-white">
                 <ul class="nav nav-pills justify-content-center p-2">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home" data-toggle="pill" aria-controls="home" aria-selected="true"><i class="fas fa-th text-white"></i></a>
+                        <button class="nav-link active btn btn-outline-light bg-secondary" href="#home" data-toggle="pill" aria-controls="home" aria-selected="true" aria-pressed="true"><i class="fas fa-th text-white"></i></button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu2" data-toggle="pill" aria-controls="menu2" aria-selected="false"><i class="fas fa-square text-muted"></i></a>
+                        <button class="nav-link btn btn-outline-light bg-secondary" href="#menu2" data-toggle="pill" aria-controls="menu2" aria-selected="false"><i class="fas fa-square text-white"></i></button>
                     </li>
                 </ul>
             </div>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <section class="tab-pane bg-secondary" id="menu2" role="tabpanel" aria-labelledby="home-tab"> <!--CAMBIO DE VISTA AQUI-->            
-                    <div class="row d-flex mt-3 mb-3">
+                    <div class="row d-flex mt-0 pt-3 mb-3">
                         <div class="offset-3 col-6 card bg-white border-0 p-1">
                             <div class="card-header bg-white border-0 p-1">
                                 <div class="row d-flex">
@@ -115,10 +115,14 @@
                                 <p>   
                                     Lorem, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -139,10 +143,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -163,10 +171,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -187,10 +199,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -211,10 +227,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -235,10 +255,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -259,10 +283,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -283,10 +311,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
@@ -307,10 +339,14 @@
                                 <p>   
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ligula velit, tincidunt eu vehicula eu, viverra in eros. Pellentesque in malesuada leo. Praesent vitae nibh eget risus consequat rhoncus eu quis quam
                                 </p>
-                                <div class="d-flex">
-                                    <i class="col-1 far fa-heart text-muted"></i>
-                                    <span class="text-muted">Comment...</span>
-                                    <i class="offset-9 fas fa-ellipsis-v text-muted"></i>
+                                <div class="row d-flex">
+                                    <div class="col-4">
+                                        <i class="far fa-heart text-muted"></i>
+                                        <span class="text-muted">Comment...</span>
+                                    </div>
+                                    <div class="offset-7 col-1">
+                                        <i class="fas fa-ellipsis-v text-muted"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>    
